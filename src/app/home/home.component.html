@@ -1,0 +1,19 @@
+<div class="center" *ngIf="profile">
+  <mat-card class="card">
+    <div class="text-center">
+      <img
+        mat-card-xl-image
+        src="{{ profile.avatar_url }}"
+        alt="{{ profile.avatar_url }}"
+      />
+    </div>
+
+    <div class="text-center heading">{{ profile.login }}</div>
+    <mat-card-actions>
+      <button mat-button>Followers:{{ profile.followers }}</button>
+      <button mat-button class="fl-right">
+        Following:{{ profile.following }}
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
